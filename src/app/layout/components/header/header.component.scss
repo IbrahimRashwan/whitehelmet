@@ -1,0 +1,29 @@
+@import '@assets/scss/_variables.scss';
+.header-content{
+  background: $secondary;
+  header{
+    .top-header {
+      .user-info{
+        img{
+          object-fit: cover;
+        }
+        .user-info-content{
+          .user-info-notifications{
+            color: $gray
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-nav{
+  .nav-link{
+    color: $gray;
+    padding: .5rem 1rem;
+    &.active{
+      color: $primary-link;
+    }
+
+  }
+}

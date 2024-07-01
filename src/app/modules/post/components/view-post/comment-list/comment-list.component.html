@@ -1,0 +1,11 @@
+<mat-divider class="mt-3"></mat-divider>
+<mat-list class="comments-card px-2">
+  <div mat-subheader class="comments-subheader">Comments ({{comments()?.length}})</div>
+  @for (comment of comments(); track comment.id) {
+    <app-comment-card [comment]="comment" />
+  } @empty{
+    <mat-list-item>
+      <div matListItemTitle>No Comments found</div>
+    </mat-list-item>
+  }
+</mat-list>

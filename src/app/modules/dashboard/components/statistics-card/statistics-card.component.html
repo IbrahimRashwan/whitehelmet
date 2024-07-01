@@ -1,4 +1,4 @@
-<div class="card statistics-card p-3 rounded-4" [class]="'main-bg-'+(config().bgColor || 'secondary')">
+<div class="card statistics-card p-3 rounded-4" [class]="'main-bg-'+(config().bgColor || 'secondary')+' card-size-'+ config().itemSize">
   @if (config().title || config().showActions) {
   <div class="card-header d-flex align-items-start justify-content-between">
       <h5>{{config().title}}</h5>

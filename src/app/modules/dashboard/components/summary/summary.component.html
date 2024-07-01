@@ -7,21 +7,21 @@
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-xl-6 col-12">
 
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6 col-12">
         <span>Overview</span>
         <div class="row">
           @for (statisticsItem of headerStatistics; track $index) {
-            <div class="col-md-6 mb-3">
+            <div class="col-xl-6 col-12 mb-3">
               <app-statistics-card [config]="statisticsItem"/>
             </div>
           }
         </div>
         <div class="row">
           @for (statisticsItem of footerStatistics; track $index) {
-            <div class="col-md-3">
+            <div class="col-xl-3 col-md-4 col-12 mb-xl-0 mb-4">
               <app-statistics-card [config]="statisticsItem"/>
             </div>
           }

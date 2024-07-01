@@ -1,1 +1,15 @@
-<p>post works!</p>
+<div class="row">
+  @defer (when !isLoading) {
+    @for (post of posts(); track post.id) {
+      <div class="col-xl-3 col-md-4 col-12 mb-3 cursor-pointer" [routerLink]="['./',post.id]">
+        <app-post-card class="d-block w-100 h-100" [post]="post"/>
+      </div>
+    } @empty{
+      <p class="text-white">No Posts Found</p>
+    }
+  } @placeholder {
+    <p class="text-white">Loading ...</p>
+  }
+</div>
+
+<p>post works! {{posts()?.length}}</p>

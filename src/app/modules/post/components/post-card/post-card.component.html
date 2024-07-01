@@ -1,0 +1,11 @@
+<mat-card class="post-card" [class]="fullHeight() ? 'h-100' : ''" appearance="outlined">
+  <mat-card-header class="mb-2">
+    <mat-card-title class="post-card-title">{{post().user?.name ?? 'NA'}}</mat-card-title>
+    <mat-card-subtitle class="post-card-subtitle">{{post().user?.company?.name ?? 'NA'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{post().body}}
+    </p>
+  </mat-card-content>
+</mat-card>

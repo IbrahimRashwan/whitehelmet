@@ -1,5 +1,8 @@
 import { Routes } from '@angular/router';
 import { LayoutContentComponent } from './components/layout-content.component';
+import { postRoutes } from '@modules/post/post.routes';
+import { budgetRoutes } from '@modules/budget/budget.routes';
+import { teamRoutes } from '@modules/team/team.routes';
 
 export const layoutRoutes: Routes = [
   {
@@ -7,9 +10,9 @@ export const layoutRoutes: Routes = [
     component: LayoutContentComponent,
     children:[
       { path:'', loadComponent: () => import("@modules/dashboard/components/dashboard.component")},
-      { path:'budget', loadComponent: () => import("@modules/budget/components/budget.component")},
-      { path:'team', loadComponent: () => import("@modules/team/components/team.component")},
-      { path:'post', loadComponent: () => import("@modules/post/components/post.component")}
+      { path:'budget', children:budgetRoutes},
+      { path:'team', children:teamRoutes},
+      { path:'post', children:postRoutes}
     ]
   }
 ];

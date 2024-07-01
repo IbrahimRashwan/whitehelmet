@@ -1,0 +1,19 @@
+@import '@assets/scss/_variables.scss';
+.comment-card{
+  background-color: $secondary-card;
+  .comment-user-name{
+    color: $white;
+  }
+  .comment-user-body{
+    color: $gray;
+  }
+}
+
+::ng-deep{
+  .comment-card{
+    .mdc-list-item__content{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

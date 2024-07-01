@@ -1,0 +1,8 @@
+@import '@assets/scss/_variables.scss';
+.post-card{
+  background-color: $secondary;
+  color: $gray;
+  .post-card-title, .post-card-subtitle{
+    color: $white;
+  }
+}

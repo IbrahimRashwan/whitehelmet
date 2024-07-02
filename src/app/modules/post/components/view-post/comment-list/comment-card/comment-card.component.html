@@ -1,6 +1,6 @@
 <div class="comment-card mb-4 py-4 rounded mx-2">
   <mat-list-item>
-    <div matListItemTitle class="comment-user-name">{{comment().user?.name ?? "NA"}}</div>
+    <div matListItemTitle class="comment-user-name">{{comment().user?.name ?? comment().email}}</div>
     <div matListItemLine class="comment-user-body">{{comment().body}}</div>
   </mat-list-item>
 </div>

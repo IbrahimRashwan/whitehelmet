@@ -1,6 +1,6 @@
 <div class="card summary-card p-3 rounded-4">
   <div class="card-header d-flex align-items-start justify-content-between">
-    <h5>Github Issues Summary</h5>
+    <h5 class="card-header-title">Github Issues Summary</h5>
     <div>
 
     </div>
@@ -8,6 +8,18 @@
   <div class="card-body">
     <div class="row">
       <div class="col-xl-6 col-12">
+        <span class="chart-title">New vs. Closed</span>
+        @defer (on viewport) {
+          <canvas class="w-100 h-100" baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [type]="'line'">
+          </canvas>
+        } @placeholder {
+          <p>Loading ...</p>
+        }
 
       </div>
       <div class="col-xl-6 col-12">

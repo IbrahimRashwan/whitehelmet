@@ -1,0 +1,28 @@
+@import '@assets/scss/_variables.scss';
+
+.post-toolbar{
+  background-color: $secondary;
+  color: $white;
+}
+
+::ng-deep{
+  .post-toolbar{
+    .mat-mdc-form-field-subscript-wrapper{
+      display: none;
+    }
+    .mdc-notched-outline.mdc-notched-outline--upgraded{
+      *{
+        border-color: $secondary-card!important;
+        &.mdc-notched-outline__notch{
+          border-left: 0!important;
+        }
+      }
+    }
+    .mat-mdc-form-field-input-control{
+      color: $white!important;
+      &::placeholder{
+        color: $white!important;
+      }
+    }
+  }
+}

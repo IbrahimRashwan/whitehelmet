@@ -2,7 +2,10 @@
 .post-card{
   background-color: $secondary;
   color: $gray;
-  .post-card-title, .post-card-subtitle{
+  .post-card-title{
     color: $white;
+  }
+  .post-card-subtitle{
+    color: $gray;
   }
 }

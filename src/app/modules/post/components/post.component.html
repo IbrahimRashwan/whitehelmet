@@ -1,6 +1,16 @@
 <div class="row">
+  <div class="col-12 mb-4">
+    <mat-toolbar class="post-toolbar d-flex align-items-center justify-content-between rounded py-5">
+      <span>Posts({{filteredPosts()?.length}})</span>
+      <mat-form-field appearance="outline">
+        <mat-label class="text-white">Search by keyword</mat-label>
+        <input [formControl]="keywordFormControl" matInput placeholder="Type keyword here...">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </mat-toolbar>
+  </div>
   @defer (when !isLoading) {
-    @for (post of posts(); track post.id) {
+    @for (post of filteredPosts(); track post.id) {
       <div class="col-xl-3 col-md-4 col-12 mb-3 cursor-pointer" [routerLink]="['./',post.id]">
         <app-post-card class="d-block w-100 h-100" [post]="post"/>
       </div>
